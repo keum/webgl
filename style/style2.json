@@ -48,7 +48,7 @@
       "tileSize": 256
     },
     "route": {
-        "data": "../data/line.geojson",
+        "data": "../data/kcsewerline.geojson",
         "type": "geojson"
 
     }
@@ -87,17 +87,6 @@
         }
       }
     },
-    /*{
-      "id": "points",
-      "type": "circle",
-      "source": "points",
-      "interactive": true,
-      "paint": {
-          "circle-radius": 5,
-          "circle-color": "#a5ea0e",
-          "circle-opacity": 0.9
-      }
-    },*/
         {
         "id": "route",
         "type": "line",
@@ -107,11 +96,10 @@
             "line-cap": "round"
         },
         "paint": {
-            "line-color": "#888",
-            "line-width": 8
+            "line-color": "#ff0000",
+            "line-width": 4
         }
     },
-
 
     {
       "id": "country_label_small",
