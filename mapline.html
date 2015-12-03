@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.11.2/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.11.2/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<style>
+    #features {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 300px;
+        overflow: auto;
+        background: rgba(255, 255, 255, 0.8);
+    }
+</style>
+
+<div id='map'></div>
+<pre id='features'></pre>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoianVzdGluIiwiYSI6Ijh1RmhSN2cifQ.-R7zSJ3glf2uXy5XzMWYnA';
+var map = new mapboxgl.Map({
+    container: 'map', //     container id
+    /*style: 'https://gist.githubusercontent.com/anonymous/2d9e4b0211832fc81be4/raw/9bdf325555018506f6858f70751c2f1c2e49c3d9/style.json',*/ //stylesheet location
+     //adding local stylesheet data
+    style: 'style/style-pt.json',
+    center: [-121.99, 47.6731], // starting position
+    zoom: 9, // starting zoom
+    hash: true
+});
+map.on('mousemove', function (e) {
+    map.featuresAt(e.point, {radius: 5}, function (err, features) {
+        if (err) throw err;
+        document.getElementById('features').innerHTML = JSON.stringify(features, null, 2);
+    });
+});
+</script>
+
+</body>
+</html>

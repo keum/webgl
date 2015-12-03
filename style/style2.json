@@ -48,10 +48,10 @@
       "tileSize": 256
     },
     "route": {
-        "data": "../data/kcsewerline.geojson",
+        "data": "data/localln.geojson",
         "type": "geojson"
 
-    }
+    },
   },
   "sprite": "mapbox://sprites/mapbox/satellite-hybrid-v8",
   "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
@@ -97,7 +97,7 @@
         },
         "paint": {
             "line-color": "#ff0000",
-            "line-width": 4
+            "line-width": 3
         }
     },
 
