@@ -50,6 +50,10 @@
     "points": {
         "data": "data/localmanhole.geoJSON",
         "type": "geojson"
+    },
+    "line_source": {
+        "data": "data/localln.geojson",
+        "type": "geojson"
     }
   },
   "sprite": "mapbox://sprites/mapbox/satellite-hybrid-v8",
@@ -97,6 +101,17 @@
           "circle-opacity": 0.8
       }
     },
+
+    {
+      "id": "local_lines",
+      "type": "line",
+      "source": "line_source",
+      "paint": {
+          "line-width": 5,
+          "line-color": "#0f0"
+      }
+    },
+
     {
       "id": "country_label_small",
       "type": "symbol",
