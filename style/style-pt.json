@@ -90,7 +90,21 @@
         }
       }
     },
+    
+
     {
+      "id": "local_lines",
+      "type": "line",
+      "source": "line_source",
+      "interactive": true,
+      "paint": {
+          "line-width": 5,
+          "line-color": "#0f0"
+      }
+    },
+
+
+{
       "id": "points",
       "type": "circle",
       "source": "points",
@@ -102,15 +116,6 @@
       }
     },
 
-    {
-      "id": "local_lines",
-      "type": "line",
-      "source": "line_source",
-      "paint": {
-          "line-width": 5,
-          "line-color": "#0f0"
-      }
-    },
 
     {
       "id": "country_label_small",
