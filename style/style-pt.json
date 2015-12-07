@@ -90,7 +90,7 @@
         }
       }
     },
-    
+
 
     {
       "id": "local_lines",
@@ -98,7 +98,7 @@
       "source": "line_source",
       "interactive": true,
       "paint": {
-          "line-width": 5,
+          "line-width": 2.5,
           "line-color": "#0f0"
       }
     },
